@@ -31,17 +31,38 @@ const Index = () => {
     email: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+    setSubmitMessage("");
+
+    try {
+      const formElement = e.target as HTMLFormElement;
+      const formDataToSend = new FormData(formElement);
+      
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend
+      });
+
+      if (response.ok) {
+        setSubmitMessage("Thank you! Your message has been sent ✅");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitMessage("Sorry, there was an error sending your message. Please try again.");
+      }
+    } catch (error) {
+      setSubmitMessage("Sorry, there was an error sending your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const skills = {
@@ -380,6 +401,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  <input type="hidden" name="access_key" value="2d0c8665-7fb8-46bd-94ed-da80f20e86c7" />
                   <div>
                     <Input
                       placeholder="Your Name"
@@ -409,9 +431,22 @@ const Index = () => {
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-teal hover:bg-teal-light">
+                  {submitMessage && (
+                    <div className={`p-3 rounded-md text-center ${
+                      submitMessage.includes('✅') 
+                        ? 'bg-green-50 text-green-700 border border-green-200' 
+                        : 'bg-red-50 text-red-700 border border-red-200'
+                    }`}>
+                      {submitMessage}
+                    </div>
+                  )}
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-teal hover:bg-teal-light hover:shadow-glow transition-all duration-300 disabled:opacity-50"
+                  >
                     <MessageSquare className="mr-2 h-4 w-4" />
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                 </form>
               </CardContent>
