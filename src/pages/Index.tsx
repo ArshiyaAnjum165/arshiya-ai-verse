@@ -165,7 +165,7 @@ const Index = () => {
               Passionate about building intelligent solutions and driving innovation through technology.
             </p>
             <a 
-              href="https://drive.google.com/uc?export=download&id=YOUR_RESUME_FILE_ID" 
+              href="https://drive.google.com/uc?export=download&id=1Z0Ns_-0Tm8RB-Yge8L2E40bVB8gAlEkg" 
               download="Arshiya_Anjum_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
