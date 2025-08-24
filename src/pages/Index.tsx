@@ -77,21 +77,21 @@ const Index = () => {
       title: "Sports Merchandise Sales",
       date: "Apr 2024",
       tech: "Python, Streamlit",
-      description: "Web platform with CRUD operations and sales analytics",
+      description: "Comprehensive web platform for sports merchandise management featuring full CRUD operations, real-time inventory tracking, sales analytics dashboard, customer management system, and automated reporting. Built with Python backend and interactive Streamlit frontend for seamless user experience.",
       icon: <Monitor className="h-6 w-6" />
     },
     {
       title: "Task Management System",
       date: "Aug 2024", 
       tech: "Python, MySQL",
-      description: "Task allocation/tracking system with analytics",
+      description: "Advanced task allocation and tracking system with comprehensive analytics dashboard. Features include task assignment workflows, progress monitoring, deadline tracking, performance analytics, team collaboration tools, and automated notifications. MySQL database ensures robust data management and reporting capabilities.",
       icon: <Database className="h-6 w-6" />
     },
     {
       title: "Smart Architectural Building Sketch (AI)",
       date: "Jan 2025",
       tech: "Python, MongoDB",
-      description: "AI-driven sketch generator with Google Earth integration",
+      description: "Innovative AI-powered architectural sketch generator that transforms basic inputs into detailed building designs. Integrated with Google Earth for location-based context, featuring machine learning algorithms for intelligent design suggestions, 3D visualization capabilities, and collaborative design workflows. MongoDB provides scalable data storage for design templates and user projects.",
       icon: <Brain className="h-6 w-6" />
     }
   ];
@@ -123,9 +123,18 @@ const Index = () => {
   ];
 
   const certifications = [
-    "Python Internship – EZTS",
-    "Simulink Onramp – MATLAB",
-    "Google Cloud Generative AI Course"
+    {
+      name: "Python Internship – EZTS",
+      link: "https://drive.google.com/file/d/1X0hCkD2E3SDp1-d8fXKpU_1uXjF-pCJp/view?usp=sharing"
+    },
+    {
+      name: "Simulink Onramp – MATLAB",
+      link: "https://drive.google.com/file/d/1ttAb4SOKOtnS05CGsD539pS9hrj4d_Nd/view?usp=sharing"
+    },
+    {
+      name: "Google Cloud Generative AI Course",
+      link: "https://drive.google.com/file/d/1yO2uNxSMHsguthICvUP1vcUBY-7r5ZZX/view?usp=drive_link"
+    }
   ];
 
   return (
@@ -346,10 +355,17 @@ const Index = () => {
               <h2 className="text-3xl font-bold mb-8 text-navy">Certifications</h2>
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
-                  <Card key={index} className="shadow-card">
-                    <CardContent className="p-4 flex items-center gap-3">
-                      <ExternalLink className="h-5 w-5 text-teal" />
-                      <span>{cert}</span>
+                  <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-1">
+                    <CardContent className="p-4">
+                      <a 
+                        href={cert.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 text-foreground hover:text-teal transition-colors group"
+                      >
+                        <ExternalLink className="h-5 w-5 text-teal group-hover:scale-110 transition-transform" />
+                        <span className="group-hover:underline">{cert.name}</span>
+                      </a>
                     </CardContent>
                   </Card>
                 ))}
