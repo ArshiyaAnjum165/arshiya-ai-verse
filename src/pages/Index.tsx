@@ -118,8 +118,14 @@ const Index = () => {
   ];
 
   const achievements = [
-    "HackB24 Hackathon participation",
-    "School-level chess competitions"
+    {
+      name: "HackB24 Hackathon participation",
+      link: "https://drive.google.com/file/d/1IstM12qYssZ87CWzYvwX9_geQOYi4d25/view?usp=sharing"
+    },
+    {
+      name: "School-level chess competitions",
+      link: null
+    }
   ];
 
   const certifications = [
@@ -140,31 +146,38 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-navy/10"></div>
+      <section className="min-h-screen flex items-center justify-center bg-gradient-premium relative overflow-hidden">
+        <div className="absolute inset-0 bg-charcoal/10"></div>
         <div className="container mx-auto px-4 text-center text-white relative z-10">
           <div className="animate-fade-up">
-            <div className="w-32 h-32 mx-auto mb-8 bg-white/20 rounded-full flex items-center justify-center animate-float">
+            <div className="w-32 h-32 mx-auto mb-8 bg-white/20 rounded-full flex items-center justify-center animate-float shadow-premium">
               <div className="w-24 h-24 bg-white/30 rounded-full flex items-center justify-center text-4xl font-bold">
                 AA
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-4">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-white to-gold-light bg-clip-text text-transparent">
               Arshiya Anjum
             </h1>
-            <div className="text-xl md:text-2xl mb-6 text-teal-light overflow-hidden whitespace-nowrap border-r-4 border-teal-light animate-typing">
+            <div className="text-xl md:text-2xl mb-6 text-gold-light overflow-hidden whitespace-nowrap border-r-4 border-gold-light animate-typing">
               AI/ML Enthusiast & Problem Solver
             </div>
             <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
               Passionate about building intelligent solutions and driving innovation through technology.
             </p>
-            <Button 
-              size="lg" 
-              className="bg-white/20 text-white border-2 border-white/30 hover:bg-white/30 backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
+            <a 
+              href="https://drive.google.com/uc?export=download&id=YOUR_RESUME_FILE_ID" 
+              download="Arshiya_Anjum_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume
-            </Button>
+              <Button 
+                size="lg" 
+                className="bg-gradient-accent text-charcoal border-2 border-gold/30 hover:border-gold hover:shadow-glow backdrop-blur-sm transition-all duration-300 transform hover:scale-105 font-semibold"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -173,10 +186,10 @@ const Index = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-navy animate-fade-up">About Me</h2>
-            <Card className="shadow-card animate-fade-up">
+            <h2 className="text-4xl font-bold text-center mb-12 text-charcoal animate-fade-up">About Me</h2>
+            <Card className="shadow-premium animate-fade-up bg-gradient-card border-platinum/20">
               <CardContent className="p-8">
-                <p className="text-lg leading-relaxed text-muted-foreground">
+                <p className="text-lg leading-relaxed text-silver">
                   I am Arshiya Anjum, a dedicated student of Artificial Intelligence and Machine Learning with a strong foundation in programming and software development. Passionate about innovation, I thrive in collaborative environments where I can solve challenging problems and contribute to impactful projects. My goal is to leverage technology to create solutions that are efficient, scalable, and user-centric.
                 </p>
               </CardContent>
@@ -342,10 +355,24 @@ const Index = () => {
               <h2 className="text-3xl font-bold mb-8 text-navy">Achievements</h2>
               <div className="space-y-4">
                 {achievements.map((achievement, index) => (
-                  <Card key={index} className="shadow-card">
-                    <CardContent className="p-4 flex items-center gap-3">
-                      <Award className="h-5 w-5 text-teal" />
-                      <span>{achievement}</span>
+                  <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-1">
+                    <CardContent className="p-4">
+                      {achievement.link ? (
+                        <a 
+                          href={achievement.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 text-foreground hover:text-teal transition-colors group"
+                        >
+                          <Award className="h-5 w-5 text-teal group-hover:scale-110 transition-transform" />
+                          <span className="group-hover:underline">{achievement.name}</span>
+                        </a>
+                      ) : (
+                        <div className="flex items-center gap-3">
+                          <Award className="h-5 w-5 text-teal" />
+                          <span>{achievement.name}</span>
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 ))}
