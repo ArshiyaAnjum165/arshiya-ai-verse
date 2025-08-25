@@ -66,7 +66,7 @@ const Index = () => {
   };
 
   const skills = {
-    technical: ["C", "C++", "Python", "SQL", "HTML", "CSS"],
+    technical: ["C", "C++", "Python", "PHP", "SQL", "HTML", "CSS"],
     concepts: ["Data Structures & Algorithms", "DBMS", "Machine Learning", "Artificial Intelligence", "OOPS"],
     soft: ["Communication", "Teamwork", "Problem-Solving", "Time Management"],
     languages: ["English", "Kannada", "Hindi"]
@@ -78,21 +78,32 @@ const Index = () => {
       date: "Apr 2024",
       tech: "Python, Streamlit",
       description: "Comprehensive web platform for sports merchandise management featuring full CRUD operations, real-time inventory tracking, sales analytics dashboard, customer management system, and automated reporting. Built with Python backend and interactive Streamlit frontend for seamless user experience.",
-      icon: <Monitor className="h-6 w-6" />
+      icon: <Monitor className="h-6 w-6" />,
+      badge: "Web Application"
     },
     {
       title: "Task Management System",
       date: "Aug 2024", 
       tech: "Python, MySQL",
       description: "Advanced task allocation and tracking system with comprehensive analytics dashboard. Features include task assignment workflows, progress monitoring, deadline tracking, performance analytics, team collaboration tools, and automated notifications. MySQL database ensures robust data management and reporting capabilities.",
-      icon: <Database className="h-6 w-6" />
+      icon: <Database className="h-6 w-6" />,
+      badge: "Backend System"
+    },
+    {
+      title: "Email Verification System",
+      date: "Nov 2024",
+      tech: "PHP, MySQL, Cron Jobs",
+      description: "Automated email verification system with intelligent notification management. Features include daily cron job scheduling for automated SMS/email reminders, robust subscribe/unsubscribe functionality, user preference management, and comprehensive delivery tracking. Built with PHP backend ensuring reliable 24-hour notification cycles.",
+      icon: <Mail className="h-6 w-6" />,
+      badge: "Automation"
     },
     {
       title: "Smart Architectural Building Sketch (AI)",
       date: "Jan 2025",
       tech: "Python, MongoDB",
       description: "Innovative AI-powered architectural sketch generator that transforms basic inputs into detailed building designs. Integrated with Google Earth for location-based context, featuring machine learning algorithms for intelligent design suggestions, 3D visualization capabilities, and collaborative design workflows. MongoDB provides scalable data storage for design templates and user projects.",
-      icon: <Brain className="h-6 w-6" />
+      icon: <Brain className="h-6 w-6" />,
+      badge: "AI/ML"
     }
   ];
 
@@ -339,22 +350,49 @@ const Index = () => {
       {/* Projects */}
       <section id="projects" className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-navy">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-navy">Featured Projects</h2>
+            <p className="text-lg text-silver max-w-2xl mx-auto">
+              Innovative solutions built with modern technologies, showcasing expertise in AI/ML, web development, and system automation.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {projects.map((project, index) => (
-              <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-2 group">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 bg-teal/10 rounded-lg text-teal group-hover:bg-teal group-hover:text-white transition-colors">
-                      {project.icon}
+              <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-500 transform hover:-translate-y-3 group relative overflow-hidden border-l-4 border-l-teal">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal/5 to-navy/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardHeader className="relative z-10">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="p-3 bg-gradient-to-br from-teal/10 to-teal/20 rounded-xl text-teal group-hover:bg-gradient-to-br group-hover:from-teal group-hover:to-teal-light group-hover:text-white transition-all duration-300 shadow-sm">
+                        {project.icon}
+                      </div>
+                      <div>
+                        <span className="text-xs font-semibold text-teal bg-teal/10 px-2 py-1 rounded-full">
+                          {project.badge}
+                        </span>
+                      </div>
                     </div>
-                    <span className="text-sm text-muted-foreground">{project.date}</span>
+                    <span className="text-sm text-muted-foreground font-medium bg-muted/50 px-2 py-1 rounded-md">
+                      {project.date}
+                    </span>
                   </div>
-                  <CardTitle className="text-xl group-hover:text-teal transition-colors">{project.title}</CardTitle>
-                  <CardDescription className="text-sm font-medium text-navy">{project.tech}</CardDescription>
+                  <CardTitle className="text-xl font-bold group-hover:text-teal transition-colors duration-300 mb-2">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm font-semibold text-navy bg-navy/10 px-3 py-1 rounded-full inline-block mb-4">
+                    {project.tech}
+                  </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{project.description}</p>
+                <CardContent className="relative z-10">
+                  <p className="text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-muted">
+                    <div className="flex items-center gap-2 text-sm text-teal font-medium">
+                      <Rocket className="h-4 w-4" />
+                      <span>Production Ready</span>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
