@@ -91,9 +91,9 @@ const Index = () => {
     },
     {
       title: "Email Verification System",
-      date: "Nov 2024",
-      tech: "PHP, MySQL, Cron Jobs",
-      description: "Automated email verification system with intelligent notification management. Features include daily cron job scheduling for automated SMS/email reminders, robust subscribe/unsubscribe functionality, user preference management, and comprehensive delivery tracking. Built with PHP backend ensuring reliable 24-hour notification cycles.",
+      date: "June 2025",
+      tech: "PHP, Text Files, Cron Jobs",
+      description: "Automated email verification system with intelligent notification management. Features include daily cron job scheduling for automated SMS/email reminders, robust subscribe/unsubscribe functionality, user preference management, and comprehensive delivery tracking. Built with PHP backend using text file storage ensuring reliable 24-hour notification cycles.",
       icon: <Mail className="h-6 w-6" />,
       badge: "Automation"
     },
@@ -387,12 +387,6 @@ const Index = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
-                  <div className="mt-4 pt-4 border-t border-muted">
-                    <div className="flex items-center gap-2 text-sm text-teal font-medium">
-                      <Rocket className="h-4 w-4" />
-                      <span>Production Ready</span>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             ))}
