@@ -143,10 +143,76 @@ const Index = () => {
     }
   ];
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <main className="min-h-screen bg-background">
+      {/* Navigation Menu */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-platinum/20">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <div className="text-xl font-bold text-charcoal">Arshiya Anjum</div>
+            <div className="hidden md:flex space-x-8">
+              <button
+                onClick={() => scrollToSection('home')}
+                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => scrollToSection('about')}
+                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollToSection('skills')}
+                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+              >
+                Skills
+              </button>
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection('experience')}
+                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+              >
+                Experience
+              </button>
+              <button
+                onClick={() => scrollToSection('education')}
+                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+              >
+                Education
+              </button>
+              <button
+                onClick={() => scrollToSection('achievements')}
+                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+              >
+                Achievements
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+              >
+                Contact
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-premium relative overflow-hidden">
+      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-premium relative overflow-hidden">
         <div className="absolute inset-0 bg-charcoal/10"></div>
         <div className="container mx-auto px-4 text-center text-white relative z-10">
           <div className="animate-fade-up">
@@ -183,7 +249,7 @@ const Index = () => {
       </section>
 
       {/* About Me */}
-      <section className="py-20 bg-background">
+      <section id="about" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 text-charcoal animate-fade-up">About Me</h2>
@@ -199,7 +265,7 @@ const Index = () => {
       </section>
 
       {/* Skills */}
-      <section className="py-20 bg-muted/50">
+      <section id="skills" className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-navy">Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -271,7 +337,7 @@ const Index = () => {
       </section>
 
       {/* Projects */}
-      <section className="py-20 bg-background">
+      <section id="projects" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-navy">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -297,7 +363,7 @@ const Index = () => {
       </section>
 
       {/* Experience */}
-      <section className="py-20 bg-muted/50">
+      <section id="experience" className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-navy">Experience</h2>
           <div className="max-w-2xl mx-auto">
@@ -319,7 +385,7 @@ const Index = () => {
       </section>
 
       {/* Education */}
-      <section className="py-20 bg-background">
+      <section id="education" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-navy">Education</h2>
           <div className="max-w-3xl mx-auto">
@@ -348,7 +414,7 @@ const Index = () => {
       </section>
 
       {/* Achievements & Certifications */}
-      <section className="py-20 bg-muted/50">
+      <section id="achievements" className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -403,7 +469,7 @@ const Index = () => {
       </section>
 
       {/* Contact */}
-      <section className="py-20 bg-background">
+      <section id="contact" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-navy">Contact</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
