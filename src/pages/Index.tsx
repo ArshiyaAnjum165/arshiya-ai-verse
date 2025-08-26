@@ -697,70 +697,96 @@ const Index = () => {
       </section>
 
       {/* Let's Connect */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">
-            Open to collaborations, internships, and opportunities 🚀
-          </h2>
-          <p className="text-xl mb-8 opacity-90 text-white">
-            Let's build something amazing together!
-          </p>
-          <div className="flex justify-center gap-6 mb-8">
-            <a 
-              href="mailto:anjumarshiya016@gmail.com"
-              className="p-4 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
-              title="Email"
-            >
-              <Mail className="h-8 w-8 text-white" />
-            </a>
-            <a 
-              href="https://wa.me/917338186008"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
-              title="WhatsApp"
-            >
-              <MessageSquare className="h-8 w-8 text-white" />
-            </a>
-            <a 
-              href="https://linkedin.com/in/arshiya-anjum-409009308" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-4 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
-              title="LinkedIn"
-            >
-              <Linkedin className="h-8 w-8 text-white" />
-            </a>
-            <a 
-              href="https://github.com/ArshiyaAnjum165" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-4 bg-white/20 rounded-full hover:bg-white/30 transition-all duration-300 transform hover:scale-110"
-              title="GitHub"
-            >
-              <Github className="h-8 w-8 text-white" />
-            </a>
-          </div>
-            <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-white mb-4">Let's Connect</h3>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button 
-                size="lg" 
-                className="bg-white text-navy hover:bg-white/90 transition-all duration-300 transform hover:scale-105"
-                onClick={() => window.open('mailto:anjumarshiya016@gmail.com', '_blank')}
-              >
-                <Mail className="mr-2 h-5 w-5" />
-                Email Me
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-white text-white bg-transparent hover:bg-white hover:text-navy transition-all duration-300 transform hover:scale-105"
-                onClick={() => window.open('https://wa.me/917338186008', '_blank')}
-              >
-                <MessageSquare className="mr-2 h-5 w-5" />
-                WhatsApp
-              </Button>
+      <section className="py-20 bg-gradient-premium relative overflow-hidden">
+        <div className="absolute inset-0 bg-charcoal/20"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white animate-fade-up">
+              Let's Connect & Collaborate
+            </h2>
+            <p className="text-xl md:text-2xl mb-12 opacity-90 text-white/90 animate-fade-up">
+              Ready to turn ideas into reality? I'm always excited to discuss new opportunities, 
+              innovative projects, and meaningful collaborations.
+            </p>
+            
+            {/* Contact Options */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div className="group">
+                <a 
+                  href="mailto:anjumarshiya016@gmail.com"
+                  className="block p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-premium"
+                >
+                  <Mail className="h-8 w-8 text-gold-light mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                  <p className="text-white/80 text-sm">Quick response guaranteed</p>
+                </a>
+              </div>
+              
+              <div className="group">
+                <a 
+                  href="https://wa.me/917338186008"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-premium"
+                >
+                  <MessageSquare className="h-8 w-8 text-gold-light mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-lg font-semibold text-white mb-2">WhatsApp</h3>
+                  <p className="text-white/80 text-sm">Instant messaging</p>
+                </a>
+              </div>
+              
+              <div className="group">
+                <a 
+                  href="https://linkedin.com/in/arshiya-anjum-409009308" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-premium"
+                >
+                  <Linkedin className="h-8 w-8 text-gold-light mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-lg font-semibold text-white mb-2">LinkedIn</h3>
+                  <p className="text-white/80 text-sm">Professional network</p>
+                </a>
+              </div>
+              
+              <div className="group">
+                <a 
+                  href="https://github.com/ArshiyaAnjum165" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-premium"
+                >
+                  <Github className="h-8 w-8 text-gold-light mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-lg font-semibold text-white mb-2">GitHub</h3>
+                  <p className="text-white/80 text-sm">Code repository</p>
+                </a>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="space-y-6">
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-accent text-charcoal border-2 border-gold/30 hover:border-gold hover:shadow-glow backdrop-blur-sm transition-all duration-300 transform hover:scale-105 font-semibold px-8 py-3"
+                  onClick={() => window.open('mailto:anjumarshiya016@gmail.com', '_blank')}
+                >
+                  <Mail className="mr-2 h-5 w-5" />
+                  Get In Touch
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="border-2 border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-charcoal transition-all duration-300 transform hover:scale-105 font-semibold px-8 py-3"
+                  onClick={() => window.open('https://wa.me/917338186008', '_blank')}
+                >
+                  <MessageSquare className="mr-2 h-5 w-5" />
+                  Chat on WhatsApp
+                </Button>
+              </div>
+              
+              <p className="text-white/70 text-lg">
+                🚀 Open to internships, collaborations, and exciting opportunities
+              </p>
             </div>
           </div>
         </div>
