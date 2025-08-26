@@ -80,7 +80,7 @@ const Index = () => {
       description: "Comprehensive web platform for sports merchandise management featuring full CRUD operations, real-time inventory tracking, sales analytics dashboard, customer management system, and automated reporting. Built with Python backend and interactive Streamlit frontend for seamless user experience.",
       icon: <Monitor className="h-6 w-6" />,
       badge: "Web Application",
-      githubRepo: "Sports-Merchandise-Sales"
+      githubUrl: "https://github.com/ArshiyaAnjum165/Python-Projects/tree/main/project"
     },
     {
       title: "Task Management System",
@@ -89,7 +89,7 @@ const Index = () => {
       description: "Advanced task allocation and tracking system with comprehensive analytics dashboard. Features include task assignment workflows, progress monitoring, deadline tracking, performance analytics, team collaboration tools, and automated notifications. MySQL database ensures robust data management and reporting capabilities.",
       icon: <Database className="h-6 w-6" />,
       badge: "Backend System",
-      githubRepo: "Task-Management-System"
+      githubUrl: "https://github.com/ArshiyaAnjum165/Python-Projects/tree/main/Task_Management_System"
     },
     {
       title: "Email Verification System",
@@ -98,7 +98,7 @@ const Index = () => {
       description: "Automated email verification system with intelligent notification management. Features include daily cron job scheduling for automated SMS/email reminders, robust subscribe/unsubscribe functionality, user preference management, and comprehensive delivery tracking. Built with PHP backend using text file storage ensuring reliable 24-hour notification cycles.",
       icon: <Mail className="h-6 w-6" />,
       badge: "Automation",
-      githubRepo: "Email-Verification-System"
+      githubUrl: "https://github.com/ArshiyaAnjum165/Email-Verification"
     },
     {
       title: "Smart Architectural Building Sketch (AI)",
@@ -107,7 +107,7 @@ const Index = () => {
       description: "Innovative AI-powered architectural sketch generator that transforms basic inputs into detailed building designs. Integrated with Google Earth for location-based context, featuring machine learning algorithms for intelligent design suggestions, 3D visualization capabilities, and collaborative design workflows. MongoDB provides scalable data storage for design templates and user projects.",
       icon: <Brain className="h-6 w-6" />,
       badge: "AI/ML",
-      githubRepo: "Smart-Architectural-Building-Sketch"
+      githubUrl: "https://github.com/ArshiyaAnjum165/Python-Projects/tree/main/SMART%20SKETCH"
     }
   ];
 
@@ -402,7 +402,7 @@ const Index = () => {
                       size="sm"
                       variant="outline"
                       className="border-teal text-teal hover:bg-teal hover:text-white transition-all duration-300"
-                      onClick={() => window.open(`https://github.com/ArshiyaAnjum165/${project.githubRepo}`, '_blank')}
+                      onClick={() => window.open(project.githubUrl, '_blank')}
                     >
                       <Github className="h-4 w-4 mr-2" />
                       View Code
@@ -741,7 +741,7 @@ const Index = () => {
               <Github className="h-8 w-8 text-white" />
             </a>
           </div>
-          <div className="space-y-4">
+            <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white mb-4">Let's Connect</h3>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
