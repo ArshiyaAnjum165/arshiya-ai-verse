@@ -68,6 +68,7 @@ const Index = () => {
   const skills = {
     technical: ["C", "C++", "Python", "PHP", "SQL", "HTML", "CSS"],
     concepts: ["Data Structures & Algorithms", "DBMS", "Machine Learning", "Artificial Intelligence", "OOPS"],
+    tools: ["Git", "GitHub", "Visual Studio Code"],
     soft: ["Communication", "Teamwork", "Problem-Solving", "Time Management"],
     languages: ["English", "Kannada", "Hindi"]
   };
@@ -75,7 +76,7 @@ const Index = () => {
   const projects = [
     {
       title: "Gesture-Driven AI File Viewer",
-      date: "Jan 2025",
+      date: "Oct 2024",
       tech: "MediaPipe, Vosk, Hugging Face APIs",
       description: "An intelligent file viewing system controlled through hand gestures and voice commands, built using MediaPipe, Vosk, and Hugging Face APIs. The system enables users to navigate files hands-free, enhancing accessibility and modern human-computer interaction.",
       icon: <Smartphone className="h-6 w-6" />,
@@ -297,7 +298,7 @@ const Index = () => {
       <section id="skills" className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-navy">Skills</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <Card className="shadow-card hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-2">
               <CardHeader className="text-center">
                 <Code className="h-8 w-8 mx-auto mb-2 text-teal" />
@@ -323,6 +324,22 @@ const Index = () => {
                 <div className="flex flex-wrap gap-2">
                   {skills.concepts.map((skill, index) => (
                     <span key={index} className="px-3 py-1 bg-navy/10 text-navy rounded-full text-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-card hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-2">
+              <CardHeader className="text-center">
+                <Code className="h-8 w-8 mx-auto mb-2 text-teal" />
+                <CardTitle className="text-lg">Tools</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {skills.tools.map((skill, index) => (
+                    <span key={index} className="px-3 py-1 bg-teal/10 text-teal rounded-full text-sm">
                       {skill}
                     </span>
                   ))}
