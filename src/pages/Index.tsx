@@ -74,6 +74,15 @@ const Index = () => {
 
   const projects = [
     {
+      title: "Gesture-Driven AI File Viewer",
+      date: "Jan 2025",
+      tech: "MediaPipe, Vosk, Hugging Face APIs",
+      description: "An intelligent file viewing system controlled through hand gestures and voice commands, built using MediaPipe, Vosk, and Hugging Face APIs. The system enables users to navigate files hands-free, enhancing accessibility and modern human-computer interaction.",
+      icon: <Smartphone className="h-6 w-6" />,
+      badge: "AI/ML",
+      githubUrl: "https://github.com/ArshiyaAnjum165/IPCV"
+    },
+    {
       title: "Sports Merchandise Sales",
       date: "Apr 2024",
       tech: "Python, Streamlit",
@@ -252,8 +261,7 @@ const Index = () => {
               Passionate about building intelligent solutions and driving innovation through technology.
             </p>
             <a 
-              href="https://drive.google.com/uc?export=download&id=1Z0Ns_-0Tm8RB-Yge8L2E40bVB8gAlEkg" 
-              download="Arshiya_Anjum_Resume.pdf"
+              href="https://drive.google.com/file/d/1_IH0Qnq8X-mF3BTaDcdcx-rzix8m44E7/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -261,8 +269,8 @@ const Index = () => {
                 size="lg" 
                 className="bg-gradient-accent text-charcoal border-2 border-gold/30 hover:border-gold hover:shadow-glow backdrop-blur-sm transition-all duration-300 transform hover:scale-105 font-semibold"
               >
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
+                <ExternalLink className="mr-2 h-5 w-5" />
+                View My Resume
               </Button>
             </a>
           </div>
