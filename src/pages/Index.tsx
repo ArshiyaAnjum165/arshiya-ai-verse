@@ -176,64 +176,63 @@ const Index = () => {
   };
 
   return (
-    <main className="min-h-screen bg-background">
-      {/* Navigation Menu */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-platinum/20">
+    <main className="min-h-screen">{/* Navigation Menu */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md border-b border-white/10">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <div className="text-xl font-bold text-charcoal">Arshiya Anjum</div>
+            <div className="text-xl font-bold text-white">Arshiya Anjum</div>
             <div className="hidden md:flex space-x-8">
               <button
                 onClick={() => scrollToSection('home')}
-                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-gold-light transition-colors duration-300 font-medium"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection('about')}
-                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-gold-light transition-colors duration-300 font-medium"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection('skills')}
-                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-gold-light transition-colors duration-300 font-medium"
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection('projects')}
-                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-gold-light transition-colors duration-300 font-medium"
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection('experience')}
-                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-gold-light transition-colors duration-300 font-medium"
               >
                 Experience
               </button>
               <button
                 onClick={() => scrollToSection('education')}
-                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-gold-light transition-colors duration-300 font-medium"
               >
                 Education
               </button>
               <button
                 onClick={() => scrollToSection('achievements')}
-                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-gold-light transition-colors duration-300 font-medium"
               >
                 Achievements
               </button>
               <button
                 onClick={() => scrollToSection('opportunities')}
-                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-gold-light transition-colors duration-300 font-medium"
               >
                 Opportunities
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="text-silver hover:text-teal transition-colors duration-300 font-medium"
+                className="text-white/80 hover:text-gold-light transition-colors duration-300 font-medium"
               >
                 Contact
               </button>
@@ -279,10 +278,10 @@ const Index = () => {
       </section>
 
       {/* About Me */}
-      <section id="about" className="py-20 bg-background">
+      <section id="about" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-charcoal animate-fade-up">About Me</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-white animate-fade-up">About Me</h2>
             <Card className="shadow-premium animate-fade-up bg-gradient-card border-platinum/20">
               <CardContent className="p-8">
                 <p className="text-lg leading-relaxed text-silver">
@@ -295,9 +294,9 @@ const Index = () => {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="py-20 bg-muted/50">
+      <section id="skills" className="py-20 bg-white/5">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-navy">Skills</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <Card className="shadow-card hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-2">
               <CardHeader className="text-center">
@@ -383,11 +382,11 @@ const Index = () => {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="py-20 bg-background">
+      <section id="projects" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-navy">Featured Projects</h2>
-            <p className="text-lg text-silver max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-white">Featured Projects</h2>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Innovative solutions built with modern technologies, showcasing expertise in AI/ML, web development, and system automation.
             </p>
           </div>
@@ -441,9 +440,9 @@ const Index = () => {
       </section>
 
       {/* Experience */}
-      <section id="experience" className="py-20 bg-muted/50">
+      <section id="experience" className="py-20 bg-white/5">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-navy">Experience</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Experience</h2>
           <div className="max-w-4xl mx-auto">
             <Card className="shadow-card">
               <CardHeader>
@@ -486,9 +485,9 @@ const Index = () => {
       </section>
 
       {/* Education */}
-      <section id="education" className="py-20 bg-background">
+      <section id="education" className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-navy">Education</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Education</h2>
           <div className="max-w-3xl mx-auto">
             <div className="relative">
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-teal"></div>
@@ -515,11 +514,11 @@ const Index = () => {
       </section>
 
       {/* Achievements & Certifications */}
-      <section id="achievements" className="py-20 bg-background">
+      <section id="achievements" className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-navy">Achievements</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Achievements</h2>
               <div className="space-y-4">
                 {achievements.map((achievement, index) => (
                   <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-1">
@@ -546,7 +545,7 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-navy">Certifications</h2>
+              <h2 className="text-3xl font-bold mb-8 text-white">Certifications</h2>
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
                   <Card key={index} className="shadow-card hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-1">
@@ -570,11 +569,11 @@ const Index = () => {
       </section>
 
       {/* Looking for New Opportunities */}
-      <section id="opportunities" className="py-20 bg-muted/50">
+      <section id="opportunities" className="py-20 bg-white/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-navy">Looking for New Opportunities</h2>
-            <p className="text-lg text-silver max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-white">Looking for New Opportunities</h2>
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
               Seeking challenging roles where I can apply my skills and continue growing as a professional
             </p>
           </div>
@@ -626,36 +625,36 @@ const Index = () => {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20 bg-background">
+      <section id="contact" className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-navy">Contact</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">Contact</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-navy">Get In Touch</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-white">Get In Touch</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-teal" />
-                  <span>Ballari, Karnataka</span>
+                  <MapPin className="h-5 w-5 text-gold-light" />
+                  <span className="text-white/90">Ballari, Karnataka</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-teal" />
-                  <a href="mailto:anjumarshiya016@gmail.com" className="text-teal hover:underline">
+                  <Mail className="h-5 w-5 text-gold-light" />
+                  <a href="mailto:anjumarshiya016@gmail.com" className="text-gold-light hover:underline">
                     anjumarshiya016@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-teal" />
-                  <span>+91 73381 86008</span>
+                  <Phone className="h-5 w-5 text-gold-light" />
+                  <span className="text-white/90">+91 73381 86008</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Linkedin className="h-5 w-5 text-teal" />
-                  <a href="https://linkedin.com/in/arshiya-anjum-409009308" target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">
+                  <Linkedin className="h-5 w-5 text-gold-light" />
+                  <a href="https://linkedin.com/in/arshiya-anjum-409009308" target="_blank" rel="noopener noreferrer" className="text-gold-light hover:underline">
                     linkedin.com/in/arshiya-anjum-409009308
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Github className="h-5 w-5 text-teal" />
-                  <a href="https://github.com/ArshiyaAnjum165" target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">
+                  <Github className="h-5 w-5 text-gold-light" />
+                  <a href="https://github.com/ArshiyaAnjum165" target="_blank" rel="noopener noreferrer" className="text-gold-light hover:underline">
                     github.com/ArshiyaAnjum165
                   </a>
                 </div>

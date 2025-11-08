@@ -53,11 +53,18 @@ All colors MUST be HSL.
     --silver: 220 9% 46%;
     --platinum: 220 14% 89%;
     
+    /* Professional Navy & Teal */
+    --navy: 214 42% 10%;
+    --navy-mid: 206 70% 20%;
+    --teal: 191 87% 27%;
+    --teal-light: 191 87% 37%;
+    
     /* Professional Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--charcoal)), hsl(var(--charcoal-light)));
     --gradient-card: linear-gradient(145deg, hsl(var(--background)), hsl(var(--pearl)));
     --gradient-premium: linear-gradient(135deg, hsl(var(--charcoal)), hsl(var(--gold) / 0.1));
     --gradient-accent: linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    --gradient-background: linear-gradient(120deg, hsl(var(--navy)) 0%, hsl(var(--navy-mid)) 45%, hsl(var(--teal)) 100%);
     
     /* Elegant Shadows */
     --shadow-elegant: 0 20px 40px -12px hsl(var(--charcoal) / 0.15);
@@ -125,7 +132,14 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    background: linear-gradient(120deg, hsl(214, 42%, 10%) 0%, hsl(206, 70%, 20%) 45%, hsl(191, 87%, 27%) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: transparent;
   }
 }
